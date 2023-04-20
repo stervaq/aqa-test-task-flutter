@@ -7,6 +7,8 @@ import 'package:test_task_flutter/yellow_screen.dart';
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
+  static const Key greenButton = Key('green_btn_key');
+  static const Key yellowButton = Key('yellow_btn_key');
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,6 +21,8 @@ class HomeScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             ElevatedButton(
+
+              key: const Key('green_btn_key'),
               style: ElevatedButton.styleFrom(backgroundColor: greenColor),
               onPressed: () {
                 Navigator.push(
@@ -29,6 +33,7 @@ class HomeScreen extends StatelessWidget {
               child: const Text('зеленый'),
             ),
             ElevatedButton(
+              key: const Key('yellow_btn_key'),
               style: ElevatedButton.styleFrom(backgroundColor: yellowColor),
               onPressed: () {
                 Navigator.push(

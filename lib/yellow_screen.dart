@@ -45,6 +45,7 @@ class _YellowScreenState extends State<YellowScreen> {
               ),
             ),
             ElevatedButton(
+              key: Key('random_btn'),
                 onPressed: () {
                   setState(() {
                     randomNumber = widget.generator.generate();
@@ -67,6 +68,7 @@ class _YellowScreenState extends State<YellowScreen> {
     return Text(
       number.toString(),
       style: TextStyle(fontSize: 50, color: color),
+      key: Key('text_value'),
     );
   }
 }

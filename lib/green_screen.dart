@@ -9,6 +9,7 @@ class GreenScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
+          tooltip: 'back_btn_icon',
           onPressed: () => Navigator.pop(context),
           icon: const Icon(Icons.arrow_back),
         ),
